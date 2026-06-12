@@ -1,0 +1,57 @@
+@use './globals' as *;
+
+.admin-welcome {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: $text-dim;
+}
+
+.admin-section {
+  margin-bottom: 2.5rem;
+
+  h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__note {
+    font-size: 0.85rem;
+    color: $muted;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.permissions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.permissions-card {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: 1.25rem;
+
+  h3 { font-size: 0.95rem; margin-bottom: 0.75rem; }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  li { font-size: 0.875rem; color: $text-dim; }
+
+  &--admin h3 { color: $orange; }
+  &--user  h3 { color: $text-dim; }
+}
+
+@media (max-width: 520px) {
+  .permissions-grid { grid-template-columns: 1fr; }
+}

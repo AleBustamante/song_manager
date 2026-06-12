@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SongManager — Gestiona tu colección de canciones y playlists favoritas." />
+    <meta property="og:title" content="SongManager" />
+    <meta property="og:description" content="Tu gestor de canciones y playlists." />
+    <meta property="og:type" content="website" />
+    <title>SongManager</title>
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+      }
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+        z-index: 9999;
+        background: #f97316;
+        color: #fff;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

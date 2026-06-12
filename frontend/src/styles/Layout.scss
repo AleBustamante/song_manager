@@ -1,0 +1,19 @@
+@use './globals' as *;
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+}
+
+.app-footer {
+  border-top: 1px solid $border;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: $muted;
+}

@@ -1,0 +1,91 @@
+@use './globals' as *;
+
+.navbar {
+  background: $surface;
+  border-bottom: 1px solid $border;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $text;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    flex-shrink: 0;
+
+    &:hover { text-decoration: none; }
+  }
+
+  &__brand-icon {
+    color: $orange;
+    font-size: 1.2rem;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex: 1;
+  }
+
+  &__link {
+    color: $text-dim;
+    text-decoration: none;
+    padding: 0.3em 0.75em;
+    border-radius: $radius;
+    font-size: 0.9rem;
+    transition: color 0.15s, background 0.15s;
+
+    &:hover { color: $text; background: $surface-3; text-decoration: none; }
+    &--active { color: $orange; }
+    &:focus-visible { outline: 2px solid $orange; }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  &__user-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: $text-dim;
+  }
+
+  &__role-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15em 0.55em;
+    border-radius: 99px;
+
+    &--admin { background: $orange-bg; color: $orange; }
+    &--user  { background: $surface-3; color: $text-dim; }
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    &__brand-name { display: none; }
+    &__user-name  { display: none; }
+    &__inner { gap: 0.75rem; }
+  }
+}
