@@ -23,7 +23,7 @@ export interface Song {
   artist: string;
   album: string;
   year: number;
-  duration: string; // e.g. "3:45"
+  duration: string;
   genre: string;
   favorite: boolean;
 }

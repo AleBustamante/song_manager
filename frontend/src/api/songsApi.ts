@@ -2,7 +2,6 @@ import type { Song, Playlist } from '../types/auth';
 
 const API_URL = import.meta.env.VITE_API_URL || null;
 
-// ─── Mock data ────────────────────────────────────────────────────────────────
 let mockSongs: Song[] = [
   { id: '1', title: 'Bohemian Rhapsody', artist: 'Queen', album: 'A Night at the Opera', year: 1975, duration: '5:55', genre: 'Rock', favorite: true },
   { id: '2', title: 'Hotel California', artist: 'Eagles', album: 'Hotel California', year: 1977, duration: '6:30', genre: 'Rock', favorite: false },
